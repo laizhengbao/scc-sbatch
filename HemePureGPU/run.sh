@@ -34,6 +34,17 @@ then
 	rm -rf "${OUTPUT}"
 fi
 
+# export OMP_STACKSIZE=64M
+# export CUDA_LAUNCH_BLOCKING=1
+
+export CUDA_INJECTION64_PATH=none
+export CUDA_DBG_ATTENTION_ON_BREAK=0
+
+# export CUDA_GRAPH_DISABLE=1
+
+export UCX_IB_GDR_COPY=n
+export UCX_TLS=^cuda_gdrcopy,gdr_copy
+
 # srun --mpi=pmi2 \
 mpirun \
 	"${EXEC_PATH}" \
