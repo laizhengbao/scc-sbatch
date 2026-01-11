@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name hemelab-gpu-build
+#SBATCH --job-name hemelb-gpu-build
 #SBATCH -o log/%x.%j.out
 #SBATCH -e log/%x.%j.err
 #SBATCH --nodes=1
